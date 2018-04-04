@@ -1,0 +1,66 @@
+{
+  "visio": {
+    "url": "http://janus.hubl.in"
+  },
+  "runner": {
+    "displayClientConsole": false,
+    "puppeteer": {
+      "headless": true,
+      "args" : [
+        "--remote-debugging-address=0.0.0.0",
+        "--remote-debugging-port=9999",
+        "--disable-gpu",
+        "--allow-insecure-localhost",
+        "--no-sandbox",
+        "--user-data-dir=./tmp/chromium",
+        "--use-fake-device-for-media-stream",
+        "--use-file-for-fake-audio-capture=/opt/media/silence.wav",
+        "--use-file-for-fake-video-capture=/opt/media/logo.y4m",
+        "--use-fake-ui-for-media-stream"
+      ]
+    }
+  },
+  "client": {
+    "name": "hublot",
+    "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABECAYAAAAm2qMBAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4QYNDTU7dwT3OwAABUtJREFUeNrtnF1oHFUUx38zjUlabWKtELU3WLQPFrSOgopaRawmIZdqLVTtQ1R8sVqsH9SvQptKBaWF6oMiLYhUKiLYtMVOGqu0Kgnq260txQejEIZU0BRrqsaQZH2YO3Hczu7Ofszs1/xhyWaZPXvnN+fOPffcc8cgBlm2g5LCe38xcBtgAdcAi4HLgUuAi4BG/bVJ4BxwBhgFfgZ+ABQwpKQYT7cdpYyY4KwCHgDuB1pL9BNjwEFgv5LiUNTQogTVCTwF3Ec86gPeVlIciwKaEQGgp4HtQDPl0TiwUUmxu5TAjBJ2r2eAt6gcpYAnlRS7LNsBKAqYUSwky3Y6gAPAXCpTfwArlRRfF+NdRhGA5gH7gC6qQ33AWj2a5g3MKBDSzcB32r2NKgGV0q8blBTf5/tlswBImzQkqgiS11YTOG7ZznrvnErqUT5I+4DV1IY+UFI8Gva+ZeQBaUhH1LWkz5UUHWFgGSEhfQPcUmVdLayOKilW5IJlhIA0AHTUKCRPnygp1hTjUTuB56gPbVZSvFaIR3UCA9SXblVSfBsKlB4ym4AJ6lNGUEB6XhylD/iiTiGlgMNBN3UzwKPWAsvr2Ju6LNvpDhOZf0iij7KCsmxna42HAWHVYtnO89k8qjdhNKsdgaAs23k2YfP/3mbZzmNBHrUxYXOeXpi9y+u46VrgRMIlUO1KCsfUMUNPwiOj1vm7XgIqs1Z7N6xm3JXaRMFa6nmUTFhkl2U7KxqAZTHMn8aBaWA+0FAiu1Pa7hxtN8pA+c4GPeJFpd+Aq7yCCn11jgD3Fmm3X0khfTYXAMPAgojO40rDsh0FXB+B8UklRVMGV94DPFKg3V1KinUZ7E5pDyu1Bk2gLaKrsCnLctAThRrNAgnglYjO5QozQnc9l+VkJ+L+zSLVauJmM6NQm16cCLr69xQxAt0U5E06cF4U0bk0GZbtpCK8mS9RUgynV5NYtvMnMK9Am2eUFAt93c1bLVoKnIrKUw3LdiYi9CqA94CX9XC+BthdIruPA/txSxl3FDE4hNGYYdnOaeCyJKzMqmET+CXhkFOnTeCnhENO/WgCJxMOOTViAscTDjn1lQn0JxxyzgaOmjpKHk1wZNQp+C/DubcMDZjBrdgNM52Z0MfOlKGdfeBmOAHeL0MDmpUUrbhbPtpwc9N9+p55AvgU2ICbfW3Rx15Yhna+C75kl2U7I0B7TD++RUmxLWCuFmau1wtsjamdJ5UU1/m7HsCbMV6lKf9kOQ9IoOvEY9JO742R1pBUXC1QUhSUuo2xjTNKitkkYHr+uhd4NY5WWLbzNzAIbMbdgzeppJhJO8bQk95lwOvEW470ov+foIq7GeKvaJkGfgf+0l0rpQHNxU0sNsTcnnElRYv/g6AG9JQhXJgDLNSvStDD6R8YGbrFIHB7nQaYh5UU3TlB6ZGlEfinTkGZQCp9JM5WPi2BQ3UGabmSYigTvUzDt01a1VmNqzcTJAi3aegA7u7yWtZeJUVPrv6YNRJWUqwCvqxhSP1Kip5ce/fy2YZ2DLirxiAdUVJ0Fr0NLQDWx8CDtUJJSWGEnZCbIQ16sB4CttQIp3fymZCbedD3/m4D7sBd0KxmjeUbXBXisoO4D535rIpBLY4clG/i2AV04z6Rp9qU1xJ8SbIElu2YuGnbN4i2jqHUeklJsT02UD5gjbhFYr0VlAnIpUXAaEnCgwKhdQHrgU7gggoG9SvuAsZ0NlhmhA0YUFKsBFpwH7K1R480lTZaXgqMkOMhPLFkMtMen9QO3AhcjVuRvAR39Wc+7nJUObwvBZwF7s703JZ/AccI0dMbvIyTAAAAAElFTkSuQmCC",
+    "proxified": true,
+    "gstreamerURL": "ws://localhost:3001/kaldi",
+    "externalLibs": [
+      "https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"
+    ],
+    "archive": "http://localhost:8080/api/summary",
+    "reco": {
+      "host": "localhost",
+      "port": 3001,
+      "reconnectInterval": 5000
+    }
+  },
+  "api": 3000,
+  "proxy": {
+    "port": 3001,
+    "services": {
+      "reco": {
+        "host": "hublot_recommender_1",
+        "port": 8080,
+        "reconnectInterval": 5000
+      },
+      "kaldi": "ws://hublot_kaldi-gstreamer_1:80/client/ws/speech?content-type=audio/x-matroska,+rate=(int)48000,+channels=(int)"
+    }
+  },
+  "offline": {
+    "folder":   {
+      "audioRaw": "audio_raw",
+      "audio": "audio_wav",
+      "audioMerged" : "audio_merged"
+    },
+    "audio":{
+      "format": "wav",
+      "bitrate": "16k",
+      "channels": 1,
+      "srate": 16000
+    },
+    "host": "hublot_offline_1",
+    "port": 9999
+  }
+}

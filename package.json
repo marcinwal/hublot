@@ -1,0 +1,43 @@
+{
+  "name": "hublot",
+  "description": "A robot for hubl.in",
+  "repository": "https://ci.linagora.com/labs/hublot/",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "xo && jest",
+    "test:watch": "jest --watch",
+    "ci": "yarn && xo && jest --runInBand",
+    "webdriver-start": "./bin/webdriver-start",
+    "webdriver-stop": "./bin/webdriver-stop"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.13",
+    "@ffprobe-installer/ffprobe": "^1.0.8",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "file-system": "^2.2.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "mz": "2.6.0",
+    "puppeteer": "0.12.0",
+    "sockjs-client": "1.1.4",
+    "uuid": "^3.2.1",
+    "webstomp-client": "1.2.0",
+    "ws": "3.3.1",
+    "xmlhttprequest": "1.8.0 "
+  },
+  "devDependencies": {
+    "jest": "20.0.0",
+    "xo": "0.18.2",
+    "sinon": "^4.0.2"
+  },
+  "author": "Linagora Folks",
+  "license": "AGPL-3.0",
+  "xo": {
+    "space": true,
+    "envs": [
+      "jest"
+    ]
+  }
+}

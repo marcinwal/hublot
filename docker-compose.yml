@@ -1,0 +1,31 @@
+version: '3.2'
+
+services:
+
+  hublot:
+    build: .
+    image: linagora/hublot
+    depends_on:
+      - recommender
+      - kaldi-gstreamer
+    volumes:
+      - ./media:/opt/media
+    ports:
+      - "3000:3000"
+
+  recommender:
+    image: linagora/recommender
+    expose:
+      - "8080"
+
+  kaldi-gstreamer:
+    image: linagora/kaldi-gstreamer
+    expose:
+      - "80"
+    volumes:
+      - ${MODELS_PATH}:/opt/models
+    env_file: .env
+    environment:
+      - NB_WORKERS
+      - YAML
+      - MODELS_PATH

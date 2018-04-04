@@ -1,0 +1,14 @@
+Dockerfile
+.dockerignore
+.editorconfig
+.env
+.git
+.gitignore
+.gitlab-ci.yml
+__mocks__/
+docker-compose.yml
+media/
+models/
+node_modules/
+tmp/
+nohup.out
